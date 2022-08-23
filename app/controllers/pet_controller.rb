@@ -1,4 +1,4 @@
-class PetController < Sinatra::Base
+class PetController < ApplicationController
     set :default_content_type, 'application/json'
     
     get '/pets' do
