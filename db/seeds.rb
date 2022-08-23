@@ -1,6 +1,12 @@
 puts "Deleting ..."
 Parent.destroy_all
 
+puts "Deleting ..."
+Shelter.destroy_all
+
+puts "Deleting ..."
+Pets.destroy_all
+
 puts "🌱 Seeding spices..."
 
 puts "seeding foster_parents"
@@ -46,6 +52,15 @@ end
         gift_in_honor_of: "parent"
     )
 end
+
+s1 = Shelter.create(name: "Colorado Animal Rescue", image_url: "https://www.mnpower.com/Content/Images/Company/MPJournal/2017/12202017_01.jpg", location: "Denver, Colorado", 
+    hours: "10-7", no_kill?: true, shelter_id: 1)
+    
+s2 = Shelter.create(name: "Rocky Mountain Adoption Center", image_url: "https://www.jaynescorp.com/project/farmington-animal-shelter/", location: "Boulder, Colorado",
+    hours: "8-5", no_kill?: false, shelter_id: 2)
+        
+s3 = Shelter.create(name: "California Animal Shelter", image_url: "https://www.sdhumane.org/assets/images/campus-buildings/el-cajon.jpg", location: "Los Angeles, California",
+    hours: "9-6", no_kill?: true, shelter_id: 3)
 
 # Seed your database here
 p1 = Pets.create(shelter_id: 1, parent_id: 1, name: "Lucky", image_url: "https://www.nationalgeographic.com/animals/mammals/facts/domestic-dog", species: "dog", hunger: 5, thirst: 5, fun: 5, hygiene: 5, exhaustion: 5, temperament: "cute", recommendations: "no kids", adopt_status: "not started", medical: "skin rashes", age: 6, gender: "Male", breed: "mutt", price: 120)
