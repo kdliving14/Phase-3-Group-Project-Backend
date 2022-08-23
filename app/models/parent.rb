@@ -1,6 +1,6 @@
 class Parent < ActiveRecord::Base
 
-    has_many :pets
-    has_many :shelters, through: :pets
+    has_many :Pets
+    has_many :shelters, through: :Pets
 
 end
