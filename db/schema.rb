@@ -52,4 +52,13 @@ ActiveRecord::Schema.define(version: 2022_08_23_000559) do
     t.integer "price"
   end
 
+  create_table "shelters", force: :cascade do |t|
+    t.string "name"
+    t.string "image_url"
+    t.string "location"
+    t.string "hours"
+    t.boolean "no_kill?"
+    t.integer "shelter_id"
+  end
+
 end
