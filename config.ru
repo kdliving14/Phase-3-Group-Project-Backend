@@ -15,4 +15,4 @@ use Rack::JSONBodyParser
 run ApplicationController
 use ParentsController
 use PetController
-
+use ShelterController
