@@ -31,4 +31,25 @@ ActiveRecord::Schema.define(version: 2022_08_23_000559) do
     t.string "gift_in_honor_of"
   end
 
+  create_table "pets", force: :cascade do |t|
+    t.integer "shelter_id"
+    t.integer "parent_id"
+    t.string "name"
+    t.string "image_url"
+    t.string "species"
+    t.integer "hunger"
+    t.integer "thirst"
+    t.integer "fun"
+    t.integer "hygiene"
+    t.integer "exhaustion"
+    t.string "temperament"
+    t.string "recommendations"
+    t.string "adopt_status"
+    t.string "medical"
+    t.integer "age"
+    t.string "gender"
+    t.string "breed"
+    t.integer "price"
+  end
+
 end
