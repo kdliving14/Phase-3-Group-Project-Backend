@@ -1,4 +1,4 @@
 class Shelter < ActiveRecord::Base
-    has_many :pets
-    has_many :parents, through: :pets
+    has_many :Pets
+    has_many :parents, through: :Pets
 end
