@@ -3,8 +3,6 @@ Parent.destroy_all
 Shelter.destroy_all
 Pet.destroy_all
 
-puts "🌱 Seeding spices..."
-
 puts "seeding foster_parents"
 p1 = Parent.create(
     image_url: "https://images.unsplash.com/photo-1594283255808-ee728c775ba6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwd2l0aCUyMGRvZ3xlbnwwfHwwfHw%3D&w=1000&q=80",
@@ -58,7 +56,44 @@ s3 = Shelter.create(name: "California Animal Shelter", image_url: "https://www.s
     hours: "9-6", no_kill: true, shelter_id: 3)
 
 puts "seeding pets"
-p1 = Pet.create(shelter_id: s1.id, parent_id: p1.id, name: "Lucky", image_url: "https://www.nationalgeographic.com/animals/mammals/facts/domestic-dog", species: "dog", hunger: 5, thirst: 5, fun: 5, hygiene: 5, exhaustion: 5, temperament: "cute", recommendations: "no kids", adopt_status: "not started", medical: "skin rashes", age: 6, gender: "Male", breed: "mutt", price: 120)
-p2 = Pet.create(shelter_id: s2.id, parent_id: p1.id, name: "Plucky", image_url: "https://www.nationalgeographic.com/animals/mammals/facts/domestic-dog", species: "bird", hunger: 5, thirst: 5, fun: 5, hygiene: 5, exhaustion: 5, temperament: "cute", recommendations: "no kids", adopt_status: "not started", medical: "n/a", age: 1, gender: "Male", breed: "parakeet", price: 130)
+p1 = Pet.create(
+    shelter_id: s1.id, 
+    parent_id: p1.id, 
+    name: "Lucky", 
+    image_url: "https://images.dog.ceo/breeds/pitbull/20190710_143021.jpg", 
+    species: "dog", 
+    hunger: 5, 
+    thirst: 5, 
+    fun: 5, 
+    hygiene: 5, 
+    exhaustion: 5, 
+    temperament: "loving, mellow, unexcitable", 
+    recommendations: "no kids", 
+    adopt_status: "not started", 
+    medical: "skin rashes", 
+    age: 6, 
+    gender: "male", 
+    breed: "mutt", 
+    price: 120)
+
+p2 = Pet.create(
+    shelter_id: s2.id, 
+    parent_id: p1.id, 
+    name: "Plucky", 
+    image_url: "https://images.dog.ceo/breeds/terrier-toy/n02087046_7214.jpg", 
+    species: "bird", 
+    hunger: 5, 
+    thirst: 5, 
+    fun: 5, 
+    hygiene: 5, 
+    exhaustion: 5, 
+    temperament: "friendly, easily excitable", 
+    recommendations: "a large yard", 
+    adopt_status: "started", 
+    medical: "n/a", 
+    age: 1, 
+    gender: "female", 
+    breed: "parakeet", 
+    price: 130)
 
 puts "✅ Done seeding!"
