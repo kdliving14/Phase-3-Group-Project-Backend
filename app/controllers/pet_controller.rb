@@ -2,17 +2,17 @@ class PetController < ApplicationController
     set :default_content_type, 'application/json'
     
     get '/pets' do
-      pets = Pets.all.order(:age)
+      pets = Pet.all.order(:age)
       pets.to_json
     end
 
     get '/pets/:id' do
-        pet = Pets.find(params[:id])
+        pet = Pet.find(params[:id])
         pet.to_json
       end
 
     post '/pets' do
-        pets = Pets.create(
+        pets = Pet.create(
         shelter_id: params[:shelter_id],
         parent_id: 0,
         name: params[:name],
@@ -36,7 +36,7 @@ class PetController < ApplicationController
     end
 
     patch '/pets/:id' do
-        pet = Pets.find(params[:id])
+        pet = Pet.find(params[:id])
         pet.update(
             hunger: params[:hunger],
             thirst: params[:thirst],
@@ -48,7 +48,7 @@ class PetController < ApplicationController
     end
 
     delete '/pets/:id' do
-        pet = Pets.find(params[:id])
+        pet = Pet.find(params[:id])
         pet.destroy
         pet.to_json
         "This Pet has been deleted."
