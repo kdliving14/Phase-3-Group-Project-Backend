@@ -12,6 +12,18 @@ class ParentsController < ApplicationController
         parent.to_json
     end
 
+    #get specific foster parent's shelters
+    get '/parents/:id/shelters' do
+        parent = Parent.find(params[:id]).shelters
+        parent.to_json
+    end
+
+    #get specific foster parent's pets
+    get '/parents/:id/pets' do
+        parent = Parent.find(params[:id]).pets
+        parent.to_json
+    end
+
     #create new foster parent
     post '/parents' do
         parent = Parent.create(parent_params)

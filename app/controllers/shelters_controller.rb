@@ -12,4 +12,16 @@ class ShelterController < ApplicationController
         shelter.to_json
     end
 
+    #get a specific shelter's parents
+    get '/shelters/:id/parents' do
+        shelter = Shelter.find(params[:id]).parents
+        shelter.to_json
+    end
+
+    #get a specific shelter's pets
+    get '/shelters/:id/pets' do
+        shelter = Shelter.find(params[:id]).pets
+        shelter.to_json
+    end
+
 end
