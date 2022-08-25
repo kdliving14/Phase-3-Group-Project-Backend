@@ -49,7 +49,7 @@ puts "seeding shelters"
 s1 = Shelter.create(name: "Colorado Animal Rescue", image_url: "https://www.mnpower.com/Content/Images/Company/MPJournal/2017/12202017_01.jpg", location: "Denver, Colorado", 
     hours: "10-7", no_kill: true, shelter_id: 1)
     
-s2 = Shelter.create(name: "Rocky Mountain Adoption Center", image_url: "https://www.jaynescorp.com/project/farmington-animal-shelter/", location: "Boulder, Colorado",
+s2 = Shelter.create(name: "Rocky Mountain Adoption Center", image_url: "https://www.jaynescorp.com/wp-content/uploads/2015/02/FRAS_JaynesCorp-12-1024x618.jpg", location: "Boulder, Colorado",
     hours: "8-5", no_kill: false, shelter_id: 2)
         
 s3 = Shelter.create(name: "California Animal Shelter", image_url: "https://www.sdhumane.org/assets/images/campus-buildings/el-cajon.jpg", location: "Los Angeles, California",
