@@ -21,13 +21,13 @@ ActiveRecord::Schema.define(version: 2022_08_23_000559) do
     t.integer "hours_at_home"
     t.string "living_situation"
     t.integer "current_num_pets"
-    t.boolean "pet_confiscation?"
+    t.boolean "pet_confiscation"
     t.string "vet_provider"
-    t.boolean "willing_6m_follow_up?"
-    t.boolean "give_pet_back?"
+    t.boolean "willing_6m_follow_up"
+    t.boolean "give_pet_back"
     t.integer "donated_amt"
-    t.boolean "reoccuring?"
-    t.boolean "gift?"
+    t.boolean "reoccuring"
+    t.boolean "gift"
     t.string "gift_in_honor_of"
   end
 
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2022_08_23_000559) do
     t.string "image_url"
     t.string "location"
     t.string "hours"
-    t.boolean "no_kill?"
+    t.boolean "no_kill"
     t.integer "shelter_id"
   end
 
