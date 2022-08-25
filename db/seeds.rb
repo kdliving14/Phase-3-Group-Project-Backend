@@ -47,13 +47,13 @@ p7 = Parent.create(
 puts "seeding shelters"
 
 s1 = Shelter.create(name: "Denver Animal Rescue", image_url: "https://www.mnpower.com/Content/Images/Company/MPJournal/2017/12202017_01.jpg", location: "Denver, Colorado", 
-    hours: "10-7", no_kill: true, shelter_id: 1)
+    hours: "10AM-7PM", no_kill: true, shelter_id: 1)
     
 s2 = Shelter.create(name: "Rocky Mountain Adoption Center", image_url: "https://www.jaynescorp.com/wp-content/uploads/2015/02/FRAS_JaynesCorp-12-1024x618.jpg", location: "Boulder, Colorado",
-    hours: "8-5", no_kill: true, shelter_id: 2)
+    hours: "8AM-5PM", no_kill: true, shelter_id: 2)
         
 s3 = Shelter.create(name: "Southern California Animal Shelter", image_url: "https://www.sdhumane.org/assets/images/campus-buildings/el-cajon.jpg", location: "Los Angeles, California",
-    hours: "9-6", no_kill: false, shelter_id: 3)
+    hours: "9AM-6PM", no_kill: false, shelter_id: 3)
 
 puts "seeding pets"
 p1 = Pet.create(
